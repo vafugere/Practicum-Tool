@@ -1,0 +1,6 @@
+{
+    "name": "vafug/practicum-tool",
+    "require": {
+        "phpoffice/phpspreadsheet": "^3.9"
+    }
+}
