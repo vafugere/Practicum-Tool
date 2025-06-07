@@ -126,7 +126,7 @@ CREATE TABLE `instructor_campus` (
   `userId` int(11) DEFAULT NULL,
   `campus` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -135,6 +135,7 @@ CREATE TABLE `instructor_campus` (
 
 LOCK TABLES `instructor_campus` WRITE;
 /*!40000 ALTER TABLE `instructor_campus` DISABLE KEYS */;
+INSERT INTO `instructor_campus` VALUES (37,86,2);
 /*!40000 ALTER TABLE `instructor_campus` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -211,7 +212,7 @@ CREATE TABLE `students` (
   `year` year(4) DEFAULT NULL,
   `instructor` int(11) DEFAULT NULL,
   PRIMARY KEY (`studentId`)
-) ENGINE=InnoDB AUTO_INCREMENT=1003 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1011 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -220,6 +221,7 @@ CREATE TABLE `students` (
 
 LOCK TABLES `students` WRITE;
 /*!40000 ALTER TABLE `students` DISABLE KEYS */;
+INSERT INTO `students` VALUES (1003,'Voss','Kaelin',NULL,'2211111',1,1,1,1,1,1,2025,86),(1004,'Clyne','Arden','arden@email.com','2212222',1,1,1,1,1,1,2025,86),(1005,'Merrik','Juno',NULL,'2213333',1,1,1,1,1,1,2025,86),(1006,'Elwick','Taryn',NULL,'2214444',1,1,1,1,1,1,2025,86),(1007,'Taylor','Bryn',NULL,'3221111',1,1,1,1,1,2,2025,86),(1008,'Sylvan','Marek',NULL,'3212222',1,1,1,1,1,2,2025,86),(1009,'Wynford','Sara',NULL,'3213333',1,1,1,1,1,2,2025,86),(1010,'Thorne','Zale',NULL,'3214444',1,1,1,1,1,2,2025,86);
 /*!40000 ALTER TABLE `students` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -235,7 +237,7 @@ CREATE TABLE `temp_password` (
   `userId` int(11) DEFAULT NULL,
   `tempPassword` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`tempId`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -265,7 +267,7 @@ CREATE TABLE `users` (
   `campus` int(11) DEFAULT NULL,
   `date` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -274,7 +276,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (81,'Admin','Admin','admin@email.com',NULL,'$2y$10$HUczls8DxfU2LiNaoZ1beetNNLZRMak875DccCxqgEz5gJFPwjHWG',3,1,'2025-04-15 02:17:05');
+INSERT INTO `users` VALUES (81,'Admin','Admin','admin@email.com',NULL,'$2y$10$jbNX9XY/p93NGVFKEy6/eO1XSRK.iO5dPbf84b2OYCa.DtT4wqqvC',3,1,'2025-04-15 02:17:05'),(86,'Instructor','Instructor','instructor@email.com',NULL,'$2y$10$BMstYG6EFYBRhfUzqvIywOLRRAUdvcmtA/k/lF5xL.lBstagvZeAO',2,1,'2025-06-07 19:30:41'),(87,'Arden','Clyne','arden@email.com','2212222','$2y$10$YI4BOHvm2EdQuUETZmHhgeEjc9olG0u9me9/KAp3vLhU7wXVbp15a',1,NULL,'2025-06-07 19:44:21');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1707,4 +1709,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-30  8:53:24
+-- Dump completed on 2025-06-07 16:46:39
